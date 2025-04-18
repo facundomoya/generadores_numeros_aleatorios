@@ -1,62 +1,40 @@
 function metodoLehmer() {
-    // Obtener los valores de los inputs
-    let n = document.getElementById('semillaInput').value;
-    let t = document.getElementById('digitosDeseados').value;
-    let d = document.getElementById('dInput').value;
+    // Obtener valores de los inputs
+    const n0 = parseInt(document.getElementById("semillaInput").value);
+    const t = parseInt(document.getElementById("digitosDeseadosInput").value);
+    const it = parseInt(document.getElementById("totInput").value);
 
-    // Convertir los valores a números enteros
-    let nInt = parseInt(n);
-    let tInt = parseInt(t);
-    let dInt = parseInt(d);
-
-    // Verificar si la conversión a números fue exitosa
-    if (isNaN(nInt) || isNaN(tInt) || isNaN(dInt)) {
-        alert("Por favor, ingresa valores numéricos válidos.");
-        return; // Detener la ejecución si alguno no es un número válido
+    // Validaciones
+    if (isNaN(n0) || isNaN(t) || isNaN(it) || n0 <= 0 || t <= 0 || it <= 0) {
+        alert("Valores inválidos. Todos deben ser números positivos.");
+        return;
     }
 
-    // Array para almacenar los resultados
-    let resultados = [];
+    // Limpiar resultados anteriores
+    const output = document.getElementById("output");
+    output.innerHTML = "";
 
-    // Paso 1: Realizamos el cálculo de n * t
-    let primerResultado = nInt * tInt;
+    // Inicializar semilla
+    let semilla = n0;
 
-    // Convertimos el resultado a una cadena para poder extraer los dígitos
-    let resultadoString = primerResultado.toString();
+    for (let i = 0; i < it; i++) {
+        const largok = t.toString().length;
+        const calculo1 = semilla * t;
+        const calculo1Str = calculo1.toString();
 
-    // Paso 2: Tomamos los primeros 'k' dígitos donde k es el número de dígitos de t
-    let k = t.length; // La cantidad de dígitos de t
-    let primerosKDigitos = resultadoString.substring(0, k); // Los primeros k dígitos del producto
+        const k = parseInt(calculo1Str.substring(0, largok));
+        const restantesStr = calculo1Str.substring(largok).padStart(3, '0');
+        const restantes = parseInt(restantesStr);
 
-    // Paso 3: Tomamos los siguientes 2 dígitos después de los primeros 'k'
-    let siguientes2Digitos = resultadoString.substring(k, k + 2); // Los siguientes 2 dígitos
+        const calculo2 = restantes - k;
 
-    // Paso 4: Restamos los primeros k dígitos menos los siguientes 2 dígitos
-    let resultadoResta = parseInt(primerosKDigitos) - parseInt(siguientes2Digitos);
+        // Asegurar que el número siempre tenga formato decimal válido
+        const resultadoDecimal = parseFloat("0." + Math.abs(calculo2).toString().padStart(3, '0'));
 
-    // Paso 5: Agregar un 0 al principio del resultado de la resta
-    let nuevoValor = "0" + resultadoResta;
+        // Mostrar resultado de la iteración
+        output.innerHTML += `u${i} = ${resultadoDecimal}<br>`;
 
-    // Guardamos los resultados en el array
-    resultados.push({
-        iteracion: 1, // La iteración se puede incrementar si es necesario para iteraciones sucesivas
-        P: primerResultado,
-        L: primerosKDigitos,
-        R: siguientes2Digitos,
-        ni_plus_1: resultadoResta,
-        ri: nuevoValor
-    });
-
-    // Mostrar resultados en la tabla
-    const tabla = document.getElementById("resultadosBody");
-    tabla.innerHTML = resultados.map(item => `
-        <tr>
-            <td>${item.iteracion}</td>
-            <td>${item.P}</td>
-            <td>${item.L}</td>
-            <td>${item.R}</td>
-            <td>${item.ni_plus_1}</td>
-            <td>${item.ri}</td>
-        </tr>
-    `).join(""); // Crear las filas de la tabla dinámicamente
+        // Actualizar la semilla para la próxima iteración
+        semilla = calculo2;
+    }
 }
