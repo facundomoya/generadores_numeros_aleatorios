@@ -16,7 +16,7 @@ function metodoCentralCuadrado() {
         let X = u * u;
         let X_str = X.toString();
 
-        //ajustar si la longitud menos N es impar (multiplicar por 10)
+        
         if ((X_str.length - N) % 2 !== 0) {
             X *= 10;
             X_str = X.toString();
@@ -42,7 +42,7 @@ function metodoCentralCuadrado() {
         }
     }
 
-    // Mostrar resultados
+   
     const listaResultados = document.getElementById("resultadosLista");
     listaResultados.innerHTML = resultados.map(item => `
         <li>

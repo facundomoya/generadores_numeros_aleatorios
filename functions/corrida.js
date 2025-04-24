@@ -9,10 +9,10 @@ function calcularCorridas() {
       return;
     }
   
-    // Paso 2: Secuencia binaria
+ 
     const binaria = valores.map(v => v > 0.5 ? 1 : 0);
   
-    // Paso 3: Longitudes de corrida (frecuencia observada)
+
     const frecuenciasObservadas = {};
     let longitudActual = 1;
   
@@ -26,7 +26,7 @@ function calcularCorridas() {
     }
     frecuenciasObservadas[longitudActual] = (frecuenciasObservadas[longitudActual] || 0) + 1;
   
-    // Paso 4 y 5: X² considerando TODAS las longitudes observadas y extra si Fe > 0.5
+ 
     const maxLongitud = Math.max(...Object.keys(frecuenciasObservadas).map(Number));
     let x2Calculado = 0;
     let detalle = '';
@@ -35,8 +35,8 @@ function calcularCorridas() {
       const Fei = (n - i + 3) / Math.pow(2, i + 1);
       const Foi = frecuenciasObservadas[i] || 0;
   
-      if (Foi === 0 && Fei < 0.5 && i > maxLongitud) break; // ya no hay nada útil
-      if (Fei <= 0) break; // por seguridad
+      if (Foi === 0 && Fei < 0.5 && i > maxLongitud) break; 
+      if (Fei <= 0) break; 
   
       const contribucion = Fei > 0 ? Math.pow(Foi - Fei, 2) / Fei : 0;
       x2Calculado += contribucion;

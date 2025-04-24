@@ -9,13 +9,12 @@ function calcularKS() {
       return;
     }
   
-    // Ordenar los valores de menor a mayor
+
     const valoresOrdenados = [...valores].sort((a, b) => a - b);
   
     let Dn = 0;
     let detalle = '';
-  
-    // Calcular Dn = Máx |(i/n) - u(i)|
+
     for (let i = 0; i < n; i++) {
       const ui = valoresOrdenados[i];
       const fnxi = (i + 1) / n;

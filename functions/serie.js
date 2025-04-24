@@ -1,32 +1,32 @@
 function calcularSerie() {
     const entrada = document.getElementById('valores').value;
     const valores = entrada.split(/[\s,]+/).map(Number).filter(n => !isNaN(n));
-    const n = Math.floor(valores.length / 2);  // Número de pares de números (ui, ui+1)
-    const x = parseInt(document.getElementById('subintervalos').value); // Número de celdas (x²)
-    const x2Alfa = parseFloat(document.getElementById('chiCritico').value); // Valor crítico de X²α
+    const n = Math.floor(valores.length / 2);  
+    const x = parseInt(document.getElementById('subintervalos').value); 
+    const x2Alfa = parseFloat(document.getElementById('chiCritico').value); 
 
     if (n === 0 || !x || isNaN(x2Alfa)) {
         document.getElementById('resultado').innerText = '⚠️ Por favor, completá todos los campos correctamente.';
         return;
     }
 
-    const Fe = n / (x * x);  // Frecuencia esperada por celda
+    const Fe = n / (x * x);  
 
-    // Inicializar frecuencias observadas (Fo)
+    
     const Fo = Array.from({ length: x }, () => Array(x).fill(0));
 
-    // Clasificar los pares de números en las celdas (j, k)
+    
     for (let i = 0; i < n; i++) {
         const u1 = valores[2 * i];
         const u2 = valores[2 * i + 1];
 
-        const j = Math.floor(u1 * x); // Fila
-        const k = Math.floor(u2 * x); // Columna
+        const j = Math.floor(u1 * x); 
+        const k = Math.floor(u2 * x); 
 
         Fo[j][k]++;
     }
 
-    // Calcular el estadístico X²
+   
     let sumatoria = 0;
     for (let j = 0; j < x; j++) {
         for (let k = 0; k < x; k++) {
@@ -34,7 +34,7 @@ function calcularSerie() {
         }
     }
 
-    const x2Calculado = (x * x / n) * sumatoria; // X² calculado
+    const x2Calculado = (x * x / n) * sumatoria;
     const pasa = x2Calculado <= x2Alfa;
 
     let detalle = '';

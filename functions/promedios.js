@@ -2,7 +2,7 @@ function pruebaPromedios() {
     const input = document.getElementById('numeros').value;
     const zalfaInput = document.getElementById('zalfa').value;
   
-    // Separar por espacios y limpiar
+    
     const numeros = input
       .trim()
       .split(/\s+/)

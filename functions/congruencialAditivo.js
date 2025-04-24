@@ -12,7 +12,7 @@ function congruencialAditivo() {
     }
 
     output.innerHTML = "";
-    let resultados = [...semillas]; // clonamos las semillas para operar
+    let resultados = [...semillas];
 
     for (let i = semillas.length; i < semillas.length + iteraciones; i++) {
         const nuevo = (resultados[i - 1] + resultados[i - semillas.length]) % m;

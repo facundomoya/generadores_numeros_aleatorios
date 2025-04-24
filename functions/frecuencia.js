@@ -13,24 +13,23 @@ function calcularFrecuencia() {
     const tamañoIntervalo = 1 / x;
     const Fe = n / x;
   
-    // Inicializar frecuencias observadas
+    
     const Fo = new Array(x).fill(0);
   
-    // Clasificar cada valor en su subintervalo
+    
     valores.forEach(valor => {
-      if (valor < 0 || valor > 1) return; // ignorar fuera de rango
+      if (valor < 0 || valor > 1) return; 
       let indice = Math.floor(valor * x);
-      if (indice >= x) indice = x - 1; // evitar que valor = 1.0 cause overflow
+      if (indice >= x) indice = x - 1; 
       Fo[indice]++;
     });
   
-    // Calcular sumatoria de (Fo - Fe)^2
     let sumatoria = 0;
     for (let i = 0; i < x; i++) {
       sumatoria += Math.pow(Fo[i] - Fe, 2);
     }
   
-    // Multiplicar por x/n (inverso de Fe)
+
     const x2Calculado = sumatoria * (x / n);
     const pasa = x2Calculado <= x2Alfa;
   
