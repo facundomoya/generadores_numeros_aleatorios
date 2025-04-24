@@ -47,7 +47,7 @@ function calcularFrecuencia() {
       ${detalle}<br>
       <strong>X² calculado:</strong> ${x2Calculado.toFixed(4)}<br>
       <strong>X²α crítico:</strong> ${x2Alfa}<br>
-      <strong>Resultado:</strong> ${pasa ? '✅ No se rechaza la hipótesis de uniformidad' : '❌ Se rechaza la hipótesis de uniformidad'}
+      <strong>Resultado:</strong> ${pasa ? '✅ No se rechaza la hipotesis de que los numeros provienen de un universo uniformemente distribuido' : '❌ Se rechaza la hipótesis de uniformidad'}
     `;
   }
   

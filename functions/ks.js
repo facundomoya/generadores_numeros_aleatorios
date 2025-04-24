@@ -35,7 +35,7 @@ function calcularKS() {
       ${detalle}<br>
       <strong>D<sub>n</sub> calculado:</strong> ${Dn.toFixed(5)}<br>
       <strong>D<sub>α,n</sub> (crítico):</strong> ${dAlfa}<br>
-      <strong>Resultado:</strong> ${pasa ? '✅ No se rechaza la hipótesis de uniformidad' : '❌ Se rechaza la hipótesis de uniformidad'}
+      <strong>Resultado:</strong> ${pasa ? '✅ No se rechaza la hipotesis de que los numeros provienen de un universo uniformemente distribuido' : '❌ Se rechaza la hipótesis de uniformidad'}
     `;
   }
   

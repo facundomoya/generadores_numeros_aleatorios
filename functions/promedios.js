@@ -28,15 +28,14 @@ function pruebaPromedios() {
     console.log(z0);
 
     const resultado = Math.abs(z0) < zalfa
-      ? "✅ Se acepta H₀: La muestra parece provenir de una distribución uniforme."
+      ? "✅ Se acepta H₀: No se rechaza la hipotesis de que los numeros provienen de un universo uniformemente distribuido"
       : "❌ Se rechaza H₀: La muestra NO parece uniforme.";
   
     document.getElementById('resultado').innerText = `
       Tamaño de muestra (n): ${n}
       Promedio (X̄): ${promedio.toFixed(5)}
       Z₀: ${z0.toFixed(5)}
-      Zα: ±${zalfa.toFixed(5)}
+      Zα: ${zalfa.toFixed(5)}
       Resultado: ${resultado}
     `;
   }
-  
