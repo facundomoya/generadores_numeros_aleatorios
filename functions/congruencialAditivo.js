@@ -7,10 +7,6 @@ function congruencialAditivo() {
     let semillas = semillasStr.split(/\s+/).map(n => parseInt(n)).filter(n => !isNaN(n));
     //separa las palabras numeros por espacio, los convierte a enteros y corrobora que no sean NaN
 
-    if (semillas.length < 2 || isNaN(semillas) || isNaN(m) || isNaN(iteraciones) || m <= 0 || iteraciones <= 0) {
-        alert("Verifica que ingresaste al menos 2 semillas válidas, módulo e iteraciones.");
-        return;
-    }
 
     output.innerHTML = "";
     let resultados = [...semillas];
