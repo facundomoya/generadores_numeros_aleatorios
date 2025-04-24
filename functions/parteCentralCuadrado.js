@@ -9,15 +9,15 @@ function metodoCentralCuadrado() {
         return;
     }
 
-    let resultados = [];
+    let resultados = []; //guarda los datos por cada iteración
     let u = M; 
 
     for (let i = 0; i < TOT; i++) {
         let X = u * u;
-        let X_str = X.toString();
+        let X_str = X.toString(); //se convierte a texto
 
         
-        if ((X_str.length - N) % 2 !== 0) {
+        if ((X_str.length - N) % 2 !== 0) { //verifica si la cantidad de digitos es par
             X *= 10;
             X_str = X.toString();
         }
@@ -27,7 +27,7 @@ function metodoCentralCuadrado() {
 
         const r = parseFloat('0.' + centralDigits);
 
-        resultados.push({
+        resultados.push({ //guarda los datos de la iteración (número base, cuadrado, dígitos centrales, valor decimal, etc.
             iteracion: i + 1,
             ui: u,
             Xi: X,

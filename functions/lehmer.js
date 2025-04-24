@@ -22,14 +22,14 @@ function metodoLehmer() {
         const calculo1 = semilla * t;
         const calculo1Str = calculo1.toString();
 
-        const k = parseInt(calculo1Str.substring(0, largok));
-        const restantesStr = calculo1Str.substring(largok).padStart(3, '0');
+        const k = parseInt(calculo1Str.substring(0, largok)); //largok-1
+        const restantesStr = calculo1Str.substring(largok); //largok hasta el final
         const restantes = parseInt(restantesStr);
 
         const calculo2 = restantes - k;
 
         
-        const resultadoDecimal = parseFloat("0." + Math.abs(calculo2).toString().padStart(3, '0'));
+        const resultadoDecimal = parseFloat("0." + Math.abs(calculo2).toString());
 
         
         output.innerHTML += `u${i} = ${resultadoDecimal}<br>`;
