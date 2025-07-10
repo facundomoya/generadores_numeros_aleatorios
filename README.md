@@ -68,18 +68,28 @@ Todos los generadores y pruebas funcionan correctamente y han sido validados con
 ## Descripción de archivos
 
 - **index.html**: Página de inicio con menú hacia los generadores y pruebas.  
-- **css/style.css**: Estilos personalizados para inputs, botones y márgenes.  
-- **functions/aditivo.js**: Lógica del método congruencial aditivo.  
-- **functions/mixto.js**: Lógica del método congruencial mixto.  
-- **functions/multiplicativo.js**: Lógica del método congruencial multiplicativo.  
+- **metodoCongruencialAditivo.html**: Interfaz para el generador congruencial aditivo.  
+- **metodoCongruencialMixto.html**: Interfaz para el generador congruencial mixto.  
+- **metodoCongruencialMultiplicativo.html**: Interfaz para el generador congruencial multiplicativo.  
+- **metodoDeLaParteCentralDelCuadrado.html**: Interfaz para el método de la parte central del cuadrado.  
+- **metodoDeLehmer.html**: Interfaz para el generador de Lehmer.  
+- **pruebaDeLosPromedios.html**: Interfaz para la prueba estadística de los promedios.  
+- **serie.html**: Interfaz para la prueba estadística de la serie (χ²).  
+- **frecuencia.html**: Interfaz para la prueba estadística de frecuencia (χ²).  
+- **ks.html**: Interfaz para la prueba estadística de Kolmogorov-Smirnov.  
+- **corrida.html**: Interfaz para la prueba de corridas arriba y abajo de la media.  
+- **functions/congruencialAditivo.js**: Lógica del método congruencial aditivo.  
+- **functions/congruencialMixto.js**: Lógica del método congruencial mixto.  
+- **functions/congruencialMultiplicativo.js**: Lógica del método congruencial multiplicativo.  
 - **functions/parteCentralCuadrado.js**: Lógica del método de la parte central del cuadrado.  
 - **functions/lehmer.js**: Lógica del método de Lehmer.  
 - **functions/promedios.js**: Prueba estadística de los promedios.  
 - **functions/serie.js**: Prueba estadística de la serie (χ²).  
 - **functions/frecuencia.js**: Prueba estadística de frecuencia (χ²).  
 - **functions/ks.js**: Prueba estadística de Kolmogorov-Smirnov.  
-- **functions/corrida.js**: Prueba de corridas arriba y abajo de la media.  
-- **favicon.ico**: Ícono del proyecto visible en la pestaña del navegador.
+- **functions/corrida.js**: Prueba de corridas arriba y abajo de la media.
+- **css/style.css**: Estilos personalizados para inputs, botones y márgenes.  
+- **public/calculadora-favicon.png**: Ícono del proyecto visible en la pestaña del navegador.
 
 ## Acceso al simulador
 Este proyecto está disponible en línea de forma gratuita.
