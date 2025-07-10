@@ -62,6 +62,7 @@ Xₙ₊₁ = (a · Xₙ) mod m
 ## Estado del Proyecto
 
 Completado ✔️  
+
 Todos los generadores y pruebas funcionan correctamente y han sido validados con datos de ejemplo.
 
 ## Descripción de archivos
