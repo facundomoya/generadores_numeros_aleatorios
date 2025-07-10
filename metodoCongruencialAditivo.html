@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Método Congruencial Aditivo</title>
 </head>
+
 <body>
     <main>
         <section>
@@ -16,26 +17,27 @@
                 <h1 class="text-center my-5">Método Conguencial Aditivo</h1>
                 <label>Semillas iniciales (mínimo 2, separadas por espacio):</label><br>
                 <input type="text" class="form-control" id="semillasInput" placeholder="Ej: 123 456"><br>
-                
+
                 <label>Módulo (m):</label><br>
                 <input type="number" class="form-control" id="moduloInput" value="100"><br>
-                
+
                 <label>Iteraciones:</label><br>
                 <input type="number" class="form-control" id="iteracionesInput" value="10"><br>
-                
+
                 <button type="button" class="btn btn-primary" onclick="congruencialAditivo()">Generar</button>
                 <a href="index.html">
                     <button type="button" class="btn btn-danger">Volver al inicio</button>
-                </a>   
-                
+                </a>
+
                 <div id="output" style="margin-top: 20px;"></div>
             </div>
-           
+
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
-        <script src="./functions/congruencialAditivo.js"></script>
+    <script src="./functions/congruencialAditivo.js"></script>
 </body>
+
 </html>

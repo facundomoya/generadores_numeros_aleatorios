@@ -12,10 +12,7 @@ function calcularFrecuencia() {
   
     const tamañoIntervalo = 1 / x;
     const Fe = n / x;
-  
-    
     const Fo = new Array(x).fill(0);
-  
     
     valores.forEach(valor => {
       if (valor < 0 || valor > 1) return; 
@@ -28,7 +25,6 @@ function calcularFrecuencia() {
     for (let i = 0; i < x; i++) {
       sumatoria += Math.pow(Fo[i] - Fe, 2);
     }
-  
 
     const x2Calculado = sumatoria * (x / n);
     const pasa = x2Calculado <= x2Alfa;

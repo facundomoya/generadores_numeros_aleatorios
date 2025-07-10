@@ -19,7 +19,7 @@ function metodoCongruencialMixto() {
         const calculo1 = (a * semilla + c);
         const calculo2 = calculo1 % m;
 
-        const resultadoDecimal = Number(calculo2) / Number(m); 
+        const resultadoDecimal = Number(calculo2) / Number(m);
 
         output.innerHTML += `u${i} = ${resultadoDecimal}<br>`;
 

@@ -8,7 +8,6 @@ function calcularKS() {
       document.getElementById('resultado').innerText = '⚠️ Por favor, completá todos los campos correctamente.';
       return;
     }
-  
 
     const valoresOrdenados = [...valores].sort((a, b) => a - b);
   

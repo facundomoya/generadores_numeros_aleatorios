@@ -8,11 +8,7 @@ function calcularCorridas() {
       document.getElementById('resultado').innerText = '⚠️ Por favor, completá todos los campos correctamente.';
       return;
     }
-  
- 
     const binaria = valores.map(v => v > 0.5 ? 1 : 0);
-  
-
     const frecuenciasObservadas = {};
     let longitudActual = 1;
   
@@ -25,7 +21,6 @@ function calcularCorridas() {
       }
     }
     frecuenciasObservadas[longitudActual] = (frecuenciasObservadas[longitudActual] || 0) + 1;
-  
  
     const maxLongitud = Math.max(...Object.keys(frecuenciasObservadas).map(Number));
     let x2Calculado = 0;

@@ -5,8 +5,6 @@ function congruencialAditivo() {
     const output = document.getElementById("output");
 
     let semillas = semillasStr.split(/\s+/).map(n => parseInt(n)).filter(n => !isNaN(n));
-    //separa las palabras numeros por espacio, los convierte a enteros y corrobora que no sean NaN
-
 
     output.innerHTML = "";
     let resultados = [...semillas];
