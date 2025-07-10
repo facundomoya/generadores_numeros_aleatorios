@@ -1,44 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
+    <title>Método de la parte central del Cuadrado</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Método de la parte central del cuadrado</title>
 </head>
 
 <body>
-    <main>
-        <section>
-            <h1 class="text-center my-5">Método de la parte central del Cuadrado</h1>
-            <div class="margenes-inputs">
-                <div class="input-group flex-nowrap">
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Método de la parte central del Cuadrado</h1>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+
+                <div class="mb-3 input-group">
                     <span class="input-group-text" id="semilla">M</span>
                     <input type="text" id="semillaInput" class="form-control" placeholder="Ingrese el valor de M">
                 </div>
-                <div class="input-group flex-nowrap my-3">
-                    <span class="input-group-text" id="digitosDeseados">N</span>
+
+                <div class="mb-3 input-group">
+                    <span class="input-group-text" id="N">N</span>
                     <input type="text" id="digitosDeseadosInput" class="form-control"
                         placeholder="Ingrese el valor de N">
                 </div>
-                <div class="input-group flex-nowrap my-3">
-                    <span class="input-group-text" id="digitosDeseados2">TOT</span>
+
+                <div class="mb-4 input-group">
+                    <span class="input-group-text" id="TOT">TOT</span>
                     <input type="text" id="totInput" class="form-control" placeholder="Ingrese el valor de TOT">
                 </div>
-                <button type="button" class="btn btn-primary" onclick="metodoCentralCuadrado()">Calcular</button>
-                <a href="index.html">
-                    <button type="button" class="btn btn-danger">Volver al inicio</button>
-                </a>
+
+                <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+                    <button type="button" class="btn btn-primary w-100"
+                        onclick="metodoCentralCuadrado()">Calcular</button>
+                    <a href="index.html" class="w-100">
+                        <button type="button" class="btn btn-danger w-100">Volver al inicio</button>
+                    </a>
+                </div>
+
+                <div class="mb-3">
+                    <h3>Resultados</h3>
+                </div>
+
+                <div id="resultados" class="border rounded p-3">
+                    <ul id="resultadosLista" class="mb-0"></ul>
+                </div>
+
             </div>
-            <div id="resultados" class="margenes-inputs my-3">
-                <h3>Resultados</h3>
-                <ul id="resultadosLista"></ul>
-            </div>
-        </section>
-    </main>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
